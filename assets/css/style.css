@@ -8,6 +8,12 @@
     clear: both;
 }
 
+.ti-arrow-circle-down{
+    font-size: 12px;
+    background-color: rgba(250, 246, 246, 0.747);
+    border-radius:50%;
+}
+
 .text-white {
     color:#fff !important; 
 }
@@ -46,6 +52,14 @@
     width: 33.33333%;
 }
 
+.col-five {
+    width: 20%;
+}
+
+.col-four {
+    width: 25%;
+}
+
 .col-half {
     width: 50%;
 }
@@ -65,10 +79,17 @@ a {
 li{
     list-style: none;
 }
+/* hover */
 
-.open{
-    display: flex;
+.container li:hover,
+.container li:hover .tool-icon,
+.container li:hover> a,
+.btn:hover,
+.footer-container li:hover a{
+    color: #fa6400;
+    cursor: pointer;
 }
+
 .btn-modal:hover a ,
 .btn-modal:hover{
     cursor: pointer;
@@ -76,15 +97,38 @@ li{
     color: #fa6400;
 }
 
-.btn-modal {
+.container .subnav li:hover{
+    color: #fa6400;
+    background-color: #cac9c9;
+}
+
+.footer-social .social-icon:hover{
+    color: #cccccc;
+    cursor: pointer;
+}
+
+/* hover */
+
+.btn-modal{
     font-size: 16px;
     border: none;
     background-color: rgba(146, 226, 222, 0.842);
+}
+.btn-contact{
+    border: none;
+    font-size: 16px;
+    padding: 4px;
+    background-color: #857c7c8e;
+    border-radius: 8px;
 }
 
 html {
     
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-login.js-modal.open {
+    display: flex;
 }
 
 /* - ngoài -> trong -> kích thước -> màu sắc  */
@@ -112,7 +156,7 @@ html {
     align-items: center;
     justify-content:space-between;
     padding: 0 46px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .logo-home {
@@ -154,10 +198,7 @@ html {
     display: block;
     border-radius: 5px;
 }
-.container .subnav li:hover{
-    color: #fa6400;
-    background-color: #cac9c9;
-}
+
 
 .menu-tool {
     position: relative;
@@ -181,31 +222,65 @@ html {
 }
 
 
-.container li:hover,
-.container li:hover .tool-icon,
-.container li:hover> a{
-    color: #fa6400;
-    cursor: pointer;
-}
 
 
 #slider{
     margin-top: 75px;
-    height: 1000px;
+    height: 400px;
     background-color: #f56d12d0;
 }
 
 
 #content{
-
+    
 }
 
 
 #footer{
-
+    background-color: #4c4c4c ;
+    width: 100%;
+    min-height:400px ;  
+}
+.footer-container {
+    padding: 60px 0;
+    text-align: center;
+}
+.footer-content {
+    color: #fff;
+}
+.footer-heading {
+    padding: 20px;
 }
 
-.modal {
+.footer-container a {
+    color: #cccccc;
+}
+
+.footer-content .contact-chat {
+    padding: 2px 6px;
+}
+
+.footer-social{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-social .social-icon {
+    font-size: 34px;
+    color: #cccccc9a;
+    padding: 0 4px;
+}
+
+.copyright-footer{
+    color: #bbb9b9c7;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* form-đăng nhập */
+
+.modal-login {
     position: fixed;
     left: 0;
     right: 0;
@@ -214,9 +289,10 @@ html {
     background-color: rgba(0, 0, 0, 0.308);
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: none;
 }
-.modal form {
+
+.modal-login form {
     background-color: #fff;
     width: 675px;
     max-width: calc(100% - 32px);
@@ -269,3 +345,4 @@ html {
         transform: translateY(0);
     }
 }
+/* form-đăng nhập */
