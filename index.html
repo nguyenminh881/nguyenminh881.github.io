@@ -15,8 +15,49 @@
     <div id ="main">
         <!-- Begin nav -->
         <div id ="header">
-            <ul id="nav">
-            </ul>
+            <div class="container">
+                <div class="logo-home">
+                    <a href="#">
+                        <img src="./assets/css/logo/low-res-logo.png" alt="khách hàng là thượng đế">
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul class="menu-item">
+                        <li><a href="#">TRANG PHỤC</a></li>
+                        <li>
+                            PHỤ KIỆN
+                            <ul class="subnav">
+                                <li><a href="">Mũ, Tất,..</a></li>
+                                <li> <a href="">Mĩ Phẩm( son, toner,...)</a> </li>
+                                <li> <a href="">Trang Sức( nhẫn, lens,...)</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ĐỒ LƯU NIỆM
+                            <ul class="subnav">
+                                <li> <a href="">Figure, Doll</a> </li>
+                                <li> <a href="">Poster</a> </li>
+                                <li> <a href="">20tag(tặng)</a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-tool">
+                    <ul class="tool-header">
+                        <li><a href="#" >
+                            <span class="tool-icon ti-shopping-cart-full"></span>
+                            <span>Giỏ hàng</span>
+                        </a></li>
+                        <li>
+                            <button class="tool-icon ti-search"></button>
+                        </li>
+                        <li><a href="#">
+                            <span class="tool-icon ti-user"></span>
+                            <span>Đăng nhập</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- End nav -->
 
@@ -33,7 +74,43 @@
         <div id ="footer">   
         </div>
         <!--end-footer-->
+        <div class="modal">
+                <form action="">
+                    <div class="modal-login-heading">
+                        <h3>LOG IN</h3>
+                    </div>
+                    <div class="modal-body-login">
+                        <label for="Email"></label>
+                        <input class="modal-login-input" type="email" name="Email" placeholder="Email hoặc số điện thoại" id="">
+                        <label for="Password"></label>
+                        <input class="modal-login-input" type="email" name="Password" placeholder="Mật khẩu" id="">
+                        <input class="btn-modal btn-login" type="submit" value="Đăng nhập"> 
+                    </div>
+                    <div class="footer-modal">
+                        <a class="forgot-pass" href="">Quên mật khẩu</a>
+                        <button class="btn-modal btn-signin pull-right"><a href="#">Tạo tài khoản</a></button>
+                    </div>
+                   
+                </form>
+        </div>
+    </div>
+        <script>
+            const signin = document.querySelectorAll('.js-sign-in')
+            const modal = document.querySelector(' .js-modal ')
+            const modalContainer = document.querySelector('.js-modal-container')
 
-    
+            function Showsignin(){
+                modal.classList.add('open')
+            }
+
+            function Hidesignin() {
+                modal.classList.remove('open')
+            }
+            modalClose.addEventListener('click', Hidesignin)
+            modal.addEventListener('click', Hidesignin)
+            modalContainer.addEventListener('click',function(event){
+                event.stopPropagation()
+            })
+        </script>
 </body>
 </html>
