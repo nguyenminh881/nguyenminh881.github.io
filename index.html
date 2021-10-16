@@ -229,9 +229,9 @@
                     </div>
                     <div class="modal-body-login">
                         <label for="Email"></label>
-                        <input class="modal-login-input" type="email" name="Email" placeholder="Nhập email hoặc số điện thoại" id="">
+                        <input class="modal-login-input" type="email" required name="Email" placeholder="Nhập email hoặc số điện thoại" id="">
                         <label for="Password"></label>
-                        <input class="modal-login-input" type="password" name="Password" placeholder="Mật khẩu" id="">
+                        <input class="modal-login-input" type="password" required name="Password" placeholder="Mật khẩu" id="">
                         <input class="btn-modal btn-login" type="submit" value="Đăng nhập"> 
                     </div>
                     <div class="footer-modal">
@@ -249,16 +249,16 @@
                 </div>
                 <div class="modal-body-login">
                     <label for="Email"></label>
-                    <input class="modal-login-input" type="email" name="Email" placeholder="Nhập email hoặc số điện thoại" id="">
+                    <input class="modal-login-input" type="email" required name="Email" placeholder="Nhập email hoặc số điện thoại" id="username">
                     <label for="Password"></label>
-                    <input class="modal-login-input" type="password" name="Password" placeholder="Nhập mật khẩu" id="">
+                    <input class="modal-login-input" type="password" required name="Password" placeholder="Nhập mật khẩu" id="password">
                     <label for="enter-password"></label>
-                    <input class="modal-login-input" type="password" name="enter-password" placeholder="Nhập lại mật khẩu" id="">
-                    <input class= "btn-login" type="submit" value="Đăng kí">
+                    <input class="modal-login-input" type="password" required name="enter-password" placeholder="Nhập lại mật khẩu" id="password-repeat">
+                    <input class= "btn-modal btn-login" type="submit" value="Đăng kí">
                 </div> 
                 <div class="footer-modal">
                     <a class="forgot-pass" href="">Quên mật khẩu</a>
-                    <div class="js-hidesign js-showlog btn-modal btn-signin pull-right">Đăng nhập</div>
+                    <div class="js-hidesign btn-modal btn-signin pull-right">Đăng nhập</div>
                 </div>
             </form>
         </div>
@@ -270,7 +270,6 @@
             const modal_log = document.querySelector('.js-modal-login')
             const modalContainer_log = document.querySelector('.js-modal-container-log')
             const hidelog = document.querySelector('.js-hidelog')
-            const showlog=document.querySelector('js-showlog')
             function Showlogin(){
                 modal_log.classList.add('open')
             }
@@ -278,7 +277,6 @@
                 modal_log.classList.remove('open')
             }
             login.addEventListener('click', Showlogin) 
-            showlog.addEventListener('click',Showlogin)
             hidelog.addEventListener('click',Hidelogin)
             modal_log.addEventListener('click', Hidelogin)
             modalContainer_log.addEventListener('click',function(event){
@@ -304,7 +302,6 @@
                 event.stopPropagation()
             })
         </script>
-
 <!-- form đăng nhập -->
 </body>
 </html>
