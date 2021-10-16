@@ -1,17 +1,17 @@
 function validate() {
-  var u = document.getElementById("username").value;
-  var p1 = document.getElementById("password").value;
-  var p2 = document.getElementById("password-repeat").value;
+  var username = document.getElementById("username").value;
+  var password  = document.getElementById("password").value;
+  var repassword = document.getElementById("password-repeat").value;
    
-  if(u== "") {
+  if(username== "") {
   alert("Vui lòng nhập tên!");
   return false;
   }
-  if(p1 == "") {
+  if(password == "") {
   alert("Vui lòng nhập mật khẩu!");
   return false;
   }
-  if(p2 == "") {
+  if(repassword == "") {
   alert("Vui lòng xác minh mật khẩu!");
   return false;
   }
