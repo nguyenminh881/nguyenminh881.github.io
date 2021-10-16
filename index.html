@@ -222,45 +222,89 @@
         </div>
         <!--end-footer-->
         <!-- form đăng nhập -->
-        <div class="modal-login js-modal">
-                <form class="js-modal-container" action="">
+        <div class="modal-login js-modal-login">
+                <form class="js-modal-container-log" action="">
                     <div class="modal-login-heading">
                         <h3>LOG IN</h3>
                     </div>
                     <div class="modal-body-login">
                         <label for="Email"></label>
-                        <input class="modal-login-input" type="email" name="Email" placeholder="Email hoặc số điện thoại" id="">
+                        <input class="modal-login-input" type="email" required name="Email" placeholder="Nhập email hoặc số điện thoại" id="">
                         <label for="Password"></label>
-                        <input class="modal-login-input" type="password" name="Password" placeholder="Mật khẩu" id="">
+                        <input class="modal-login-input" type="password" required name="Password" placeholder="Mật khẩu" id="">
                         <input class="btn-modal btn-login" type="submit" value="Đăng nhập"> 
                     </div>
                     <div class="footer-modal">
-                        <a class="forgot-pass" href="">Quên mật khẩu</a>
-                        <button class="btn-modal btn-signin pull-right"><a href="index1.html">Tạo tài khoản</a></button>
+                        <a class="forgot-pass" href="#">Quên mật khẩu</a>
+                        <div class="js-hidelog js-signin btn-modal btn-signin pull-right">Tạo tài khoản</div>
                     </div>
                 </form>
         </div>
         <!-- form đăng nhập -->
+        <!-- form đăng kí -->
+        <div class="modal-signin js-modal-signin">
+            <form class="js-modal-container-sign" action="">
+                <div class="modal-login-heading">
+                    <h3>SIGN IN</h3>
+                </div>
+                <div class="modal-body-login">
+                    <label for="Email"></label>
+                    <input class="modal-login-input" type="email" required name="Email" placeholder="Nhập email hoặc số điện thoại" id="">
+                    <label for="Password"></label>
+                    <input class="modal-login-input" type="password" required name="Password" placeholder="Nhập mật khẩu" id="">
+                    <label for="enter-password"></label>
+                    <input class="modal-login-input" type="password" required name="enter-password" placeholder="Nhập lại mật khẩu" id="">
+                    <input class= "btn-login" type="submit" value="Đăng kí">
+                </div> 
+                <div class="footer-modal">
+                    <a class="forgot-pass" href="">Quên mật khẩu</a>
+                    <div class="js-hidesign js-showlog btn-modal btn-signin pull-right">Đăng nhập</div>
+                </div>
+            </form>
+        </div>
     </div>
 <!-- form đăng nhập -->
     <script>
+        // đăng nhập
             const login = document.querySelector('.js-login')
-            const modal = document.querySelector('.js-modal ')
-            const modalContainer = document.querySelector('.js-modal-container')
-
+            const modal_log = document.querySelector('.js-modal-login')
+            const modalContainer_log = document.querySelector('.js-modal-container-log')
+            const hidelog = document.querySelector('.js-hidelog')
+            const showlog=document.querySelector('js-showlog')
             function Showlogin(){
-                modal.classList.add('open')
+                modal_log.classList.add('open')
             }
-
             function Hidelogin() {
-                modal.classList.remove('open')
+                modal_log.classList.remove('open')
             }
-            login.addEventListener('click', Showlogin)
-            modal.addEventListener('click', Hidelogin)
-            modalContainer.addEventListener('click',function(event){
+            login.addEventListener('click', Showlogin) 
+            showlog.addEventListener('click',Showlogin)
+            hidelog.addEventListener('click',Hidelogin)
+            modal_log.addEventListener('click', Hidelogin)
+            modalContainer_log.addEventListener('click',function(event){
                 event.stopPropagation()
             })
-    </script>
+        </script>
+        <script>
+            const signin = document.querySelector('.js-signin')
+            const modal_sign =document.querySelector('.js-modal-signin')
+            const modalContainer_sign = document.querySelector('.js-modal-container-sign')
+            const hidesign =document.querySelector('.js-hidesign')
+            function Showsignin(){
+                modal_sign.classList.add('open')
+            }
+            function Hidesignin() {
+                modal_sign.classList.remove('open')
+            }
+
+            signin.addEventListener('click', Showsignin )
+            hidesign.addEventListener('click',Hidesignin)
+            modal_sign.addEventListener('click', Hidesignin)
+            modalContainer_sign.addEventListener('click',function(event){
+                event.stopPropagation()
+            })
+        </script>
+
 <!-- form đăng nhập -->
 </body>
 </html>
