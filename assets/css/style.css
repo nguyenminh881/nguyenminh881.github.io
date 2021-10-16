@@ -108,6 +108,21 @@ li{
     cursor: pointer;
 }
 
+.btn-quick-map:hover {
+    background-color:rgba(205, 239, 240, 1);
+}
+
+a.forgot-pass:hover {
+    color: #fa6400;
+}
+
+.btn-pr:hover {
+    cursor: pointer;
+    background-color: #f7690bec;
+}
+.btn-pr:hover a{
+    color: #000;
+}
 /* hover */
 
 
@@ -128,6 +143,7 @@ li{
     border-radius: 8px;
 }
 
+
 html {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
@@ -135,6 +151,32 @@ html {
 
 .modal-login.js-modal.open {
     display: flex;
+}
+
+.btn-quick-map {
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 32px;
+    height: 64px;
+    z-index: 99999;
+    background-color: rgba(205, 239, 240, 0.952);
+    top:408px;
+    border-radius: 3px;
+    box-shadow: -1px 1px 4px rgba(214, 214, 214, 0.623);
+}
+
+
+.btn-quick-map a {
+    font-size: 12px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+}   
+
+.btn-quick-map .ti-map-alt{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 /* - ngoài -> trong -> kích thước -> màu sắc  */
@@ -298,15 +340,15 @@ html {
 }
 
 .btn-pr {
-    background-color: #fa6400f5;
-    border: none;
+    background-color: #ff6600;
     margin-top: 160px;
+    border: none;
     border-radius: 8px;
     padding: 16px;
 }
 
 .btn-pr a{
-    color:#fff;
+    color:rgb(255, 255, 255);
     font-size: 16px;
 }
 
