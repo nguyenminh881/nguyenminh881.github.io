@@ -21,11 +21,20 @@
 .mt-8 {
     margin-top: 8px !important;
 }
+.padding-bottom {
+    padding-bottom:4px;
+}
+
+.mgb-8{
+    margin-bottom: 8px!important;
+}
 
 .mt-16 {
     margin-top: 16px !important;
 }
-
+.mgl-16 {
+    margin-left: 16px !important;
+}
 .pull-right {
     float: right !important;
 }
@@ -107,7 +116,11 @@ li{
     background-color:rgb(91, 201, 195); 
     color: #fa6400;
 }
-
+.btn-pay:hover{
+    background-color:rgb(0, 0, 0);
+    cursor: pointer;
+    opacity: 0.8;
+}
 .container .subnav li:hover{
     color: #fa6400;
     background-color: #cac9c9;
@@ -180,6 +193,12 @@ html {
 .modal-signin.js-modal-signin.open{
     display: flex;
 }
+
+.modal-buy-clothes.js-modal-clothes.open {
+    display: flex;
+}
+
+
 .btn-quick-map {
     position: fixed;
     right: 0;
@@ -643,7 +662,7 @@ html {
     animation: modal-login-Fadein ease .35s;
 }
 
-.modal-login form, .modal-buy-clothes form {
+.modal-login form{
     background-color: #fff;
     width: 675px;
     max-width: calc(100% - 32px);
@@ -651,7 +670,8 @@ html {
     position: relative;
     animation: modal-login-Fadein ease .35s;
 }
-.modal-login-heading {
+.modal-login-heading,
+.modal-buy-closthes-heading{
     background-color: #009688;
     color: #fff;
     height: 75px;
@@ -694,13 +714,100 @@ html {
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.308);
+    display: none; 
     align-items: center;
     justify-content: center;
-    display: none;
+    z-index: 9999;
 }
 
 .modal-buy-clothes form {
-    
+    background-color: #fff;
+    width: 800px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    animation: modal-login-Fadein ease .35s;
+    margin-top: 40px;
+    background-color: #aed1df;
+}
+
+.modal-body-buy-closthes{
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    padding:10px 16px;
+    margin-top: 42px;
+}
+.body1-buy-clothes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.body1-buy-clothes .image-product img{
+    width: 300px;
+    height: 300px;
+    border-radius: 18px;
+}
+
+.body2-buy-clothes{
+   flex: 1;
+}
+
+
+.icon-info {
+    font-size: 26px;
+}
+
+.box-place-ship .form-row,
+.form-row-size {
+    display: flex;
+    align-content: space-around ;
+}
+.form-row-size label {
+    margin-left: 4px;
+}
+.box-place-ship .form-row{
+    margin: 18px 0;
+}
+
+.box-place-ship .form-row .info-ship {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+}
+
+.options-heading-box-modal{
+    margin: 6px 0 20px 0;
+}
+
+.options-body-box-modal {
+    margin-top: 10px;
+}
+
+.size-clothes {
+    margin-top: 1px ;
+}
+
+.modal-body-buy-closthes input {
+    outline: none;
+}
+
+.btn-pay {
+    width: 100%;
+    padding: 16px;
+    border: none ;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    opacity: 1;
+    border-radius: 8px;
+}
+.footer-modal-clothes {
+    position: relative;
+    right: 20px;
+    top:-6px;
+    padding-bottom: 8px;
 }
 
 /* end-modal-buy-hàng */
