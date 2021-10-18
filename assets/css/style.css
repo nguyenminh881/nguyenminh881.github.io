@@ -8,7 +8,7 @@
     clear: both;
 }
 
-.ti-arrow-circle-down{
+.fas .fa-angle-down{
     font-size: 12px;
     background-color: rgba(250, 246, 246, 0.747);
     border-radius:50%;
@@ -140,7 +140,7 @@ a.forgot-pass:hover {
     color:#fa6400d2 !important;
 }
 
-.btn-modal,
+.btn-modal
 {
     font-size: 16px;
     border: none;
@@ -193,6 +193,18 @@ html {
     box-shadow: -1px 1px 4px rgba(214, 214, 214, 0.623);
 }
 
+.cart-box {
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 32px;
+    height: 64px;
+    z-index: 99999;
+    background-color: rgba(205, 239, 240, 0.952);
+    top:408px;
+    border-radius: 3px;
+    box-shadow: -1px 1px 4px rgba(214, 214, 214, 0.623);
+}
 
 .btn-quick-map a {
     font-size: 12px;
@@ -223,6 +235,7 @@ html {
 }
 .container{
     height: 75px;
+    min-width: 100px;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -268,22 +281,9 @@ html {
     border-radius: 5px;
 }
 
-
-.menu-tool {
-    position: relative;
-}
-
-.menu-tool .tool-header {
-    margin-left: 34px;
-}
-
-.menu-tool li {
-    display: inline-block;
-    padding: 0 16px;
-}
-
-.menu-tool li a {
-    color: #000;
+.tool-header li{
+   display: inline-block;
+   margin: 0px 16px;
 }
 
 .menu-tool .tool-icon {
@@ -291,6 +291,41 @@ html {
     color: #000;
     border: none;
     background-color: #fff;
+}
+
+
+.search-box {
+    outline: none;
+    padding: 10px 8px;
+    border: 1px solid #3d3d3d;
+    border-radius: 6px;
+}
+
+.search-box-header , .login-btn-header
+{
+    position: relative;
+}
+
+.header-search-btn{
+    background-color:#000000;
+    border: none;
+    box-shadow: -1px 1px 2px rgb(245, 255, 254);
+    height: 36px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius:6px ;
+    position: absolute;
+    padding-left: 10px;
+    right: 0px;
+    top: 1px; 
+    cursor: pointer;
+}
+.search-btn-icon {
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    right: 5px;
+    top: 0;
+   
 }
 
 #slider{
@@ -327,6 +362,7 @@ html {
 .heading-section {
     text-align: center;
     font-size: 30px;
+    color:#fa6400;
 }
 .sub-heading-section {
     text-align: center;
@@ -465,6 +501,10 @@ html {
     
 }
 
+.heading-typical-list{
+    margin-bottom: 64px;
+}
+
 .captions-container{
 
 }
@@ -488,11 +528,15 @@ html {
     transition: all 0.5s ease;
     margin:0px 60px 0px 60px;
     padding: 5px 1px 5px 1px;
+    font-weight: 550;
 }
-
+.between-tab-item {
+    margin: 0 -30px;
+}
 .tab-item.active {
     opacity: 1;
-    box-shadow: -1px 2px 3px rgb(177, 198, 199);
+    box-shadow: -2px 2px 3px rgb(157, 176, 177);
+    font-weight: 575;
 }
 .caption.active{
     display: block;
