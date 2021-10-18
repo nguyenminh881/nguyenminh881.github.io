@@ -118,8 +118,8 @@ li{
     cursor: pointer;
 }
 
-.btn-quick-map:hover {
-    background-color:rgba(205, 239, 240, 1);
+.btn-quick-map:hover, .cart-box:hover {
+    background-color:rgb(186, 238, 240);
 }
 
 a.forgot-pass:hover {
@@ -184,38 +184,45 @@ html {
     position: fixed;
     right: 0;
     text-align: center;
-    width: 32px;
-    height: 64px;
+    width: 40px;
+    height: 68px;
     z-index: 99999;
-    background-color: rgba(205, 239, 240, 0.952);
-    top:408px;
-    border-radius: 3px;
+    background-color: #fa6400ef;
+    top:370px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius:8px;
     box-shadow: -1px 1px 4px rgba(214, 214, 214, 0.623);
+    cursor: pointer;
 }
 
 .cart-box {
     position: fixed;
     right: 0;
     text-align: center;
-    width: 32px;
-    height: 64px;
+    width: 40px;
+    height: 68px;
     z-index: 99999;
-    background-color: rgba(205, 239, 240, 0.952);
-    top:408px;
-    border-radius: 3px;
+    background-color:#fa6400ef;
+    top: 300px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius:8px;
     box-shadow: -1px 1px 4px rgba(214, 214, 214, 0.623);
+     cursor: pointer;
 }
 
-.btn-quick-map a {
+.btn-quick-map a,
+.cart-box a{
+    position: relative;
     font-size: 12px;
-    line-height: 1.4;
+    line-height: 1.6;
     color: rgb(0, 0, 0);
+    right: 1px;
+    top: 6px;
 }   
 
-.btn-quick-map .ti-map-alt{
+.btn-quick-map .ti-map-alt, .cart-btn-header{
     font-size: 16px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
+   
 }
 
 /* - ngoài -> trong -> kích thước -> màu sắc  */
@@ -246,14 +253,17 @@ html {
 }
 
 .nav{
-
+    
 }
 
 .nav .menu-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav li {
-    display: inline-block;
     padding: 15px 48px;
     position: relative;
 }
@@ -271,6 +281,7 @@ html {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(230, 228, 228, 0.87);
     margin-left: -12px;
+    z-index: 2;
 }
 .nav li:hover .subnav {
     display: block;
@@ -281,8 +292,13 @@ html {
     border-radius: 5px;
 }
 
+.tool-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .tool-header li{
-   display: inline-block;
    margin: 0px 16px;
 }
 
@@ -409,12 +425,13 @@ html {
     margin-top: 160px;
     border: none;
     border-radius: 8px;
-    padding: 16px;
+    padding: 2px 16px;
 }
 
-.btn-pr a{
+.btn-pr p{
     color:rgb(255, 255, 255);
     font-size: 16px;
+    line-height: 50px;
 }
 
 #Quick-select-product {
@@ -604,19 +621,8 @@ html {
 
 /* form-đăng nhập */
 
-.modal-login{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.308);
-    align-items: center;
-    justify-content: center;
-    display: none;
-}
-
-.modal-signin {
+.modal-login,
+.modal-signin{
     position: fixed;
     left: 0;
     right: 0;
@@ -637,7 +643,7 @@ html {
     animation: modal-login-Fadein ease .35s;
 }
 
-.modal-login form {
+.modal-login form, .modal-buy-clothes form {
     background-color: #fff;
     width: 675px;
     max-width: calc(100% - 32px);
@@ -680,6 +686,25 @@ html {
 .btn-signin{
     padding: 8px 6px;
 }
+/* modal-buy-hàng */
+.modal-buy-clothes{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.308);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.modal-buy-clothes form {
+    
+}
+
+/* end-modal-buy-hàng */
+
 @keyframes modal-login-Fadein {
     from {
         opacity: 0;
