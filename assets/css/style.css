@@ -91,6 +91,17 @@ a {
 li{
     list-style: none;
 }
+
+.heding-modal {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 30px;
+}
+
 /* hover */
 
 .container li:hover,
@@ -653,16 +664,11 @@ html {
     display: none;
 }
 .modal-signin form {
-    background-color: #fff;
-    width: 675px;
-    max-width: calc(100% - 32px);
-    min-height: 200px;
     margin-top: 40px;
-    position: relative;
-    animation: modal-login-Fadein ease .35s;
 }
 
-.modal-login form{
+.modal-login form,
+.modal-signin form{
     background-color: #fff;
     width: 675px;
     max-width: calc(100% - 32px);
@@ -670,17 +676,9 @@ html {
     position: relative;
     animation: modal-login-Fadein ease .35s;
 }
-.modal-login-heading,
-.modal-buy-closthes-heading{
+.modal-login-heading{
     background-color: #009688;
     color: #fff;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-size: 30px;
 }
 .modal-body-login {
     font-size: 16px;
@@ -717,17 +715,22 @@ html {
     display: none; 
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .modal-buy-clothes form {
-    background-color: #fff;
     width: 800px;
     max-width: calc(100% - 32px);
     min-height: 200px;
     animation: modal-login-Fadein ease .35s;
-    margin-top: 40px;
+    margin-top: 60px;
     background-color: #aed1df;
+    border-radius: 16px;
+}
+
+.modal-buy-closthes-heading{
+    border-bottom: 4px solid #000 ;
+    color: #000;
 }
 
 .modal-body-buy-closthes{

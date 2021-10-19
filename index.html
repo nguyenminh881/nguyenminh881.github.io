@@ -365,7 +365,7 @@
         <!-- form đăng nhập -->
         <div class="modal-login js-modal-login">
                 <form class="js-modal-container-log" action="">
-                    <div class="modal-login-heading">
+                    <div class="modal-login-heading heding-modal">
                         <h3>LOG IN</h3>
                     </div>
                     <div class="modal-body-login">
@@ -384,7 +384,7 @@
         <!-- form đăng nhập -->
         <!-- form đăng kí -->
         <div class="modal-signin js-modal-signin">
-            <form class="js-modal-container-sign" action="">
+            <form class="js-modal-container-sign heding-modal" action="">
                 <div class="modal-login-heading">
                     <h3>SIGN IN</h3>
                 </div>
@@ -406,7 +406,7 @@
         <!-- modal-buy-product -->
         <div class="modal-buy-clothes js-modal-clothes">
             <form class="js-modal-container-buy-closthes" action="">
-                <div class="modal-buy-closthes-heading">
+                <div class="modal-buy-closthes-heading heding-modal">
                     <h3>Mua Hàng</h3>
                 </div>
                 <div class="modal-body-buy-closthes">
@@ -470,7 +470,7 @@
                             </div>
                             <div class="form-row">
                                 <label for="place-email"></label>
-                                <input class="info-ship" type="text" required name="place-email" placeholder="Nhập địa chỉ: số nhà, đường/huyện/tỉnh/thành phố" id="">
+                                <input class="info-ship" type="text" required name="place-email" placeholder="Nhập địa chỉ: số nhà/đường/huyện/tỉnh/thành phố" id="">
                             </div>
                             <div class="form-row">
                                 <input class="btn-pay" type="submit" value="Đặt hàng">
@@ -529,20 +529,19 @@
     <script>
     const buyBtns = document.querySelectorAll('.js-buy-btn')
     const modal_clothes = document.querySelector(' .js-modal-clothes')
-    const modalContainer__clothes = document.querySelector('.js-modal-container-buy-closthes')
+    const modalContainer_clothes = document.querySelector('.js-modal-container-buy-closthes')
 
-    function ShowBuyTickets(){
+    function ShowBuyClothes(){
         modal_clothes.classList.add('open')
     }
 
-    function HideBuyTickets() {
+    function HideBuyClothes() {
         modal_clothes.classList.remove('open')
     }
     for (const buyBtn of buyBtns) {
-        buyBtn.addEventListener('click', ShowBuyTickets)
+        buyBtn.addEventListener('click', ShowBuyClothes)
     }
-
-    modal_clothes.addEventListener('click', HideBuyTickets)
+    modal_clothes.addEventListener('click', HideBuyClothes)
     modalContainer_clothes.addEventListener('click',function(event){
         event.stopPropagation()
     })
