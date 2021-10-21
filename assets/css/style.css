@@ -235,7 +235,7 @@ li{
    color:#fff;
 }
 
-.btn-quick-map:hover .box-quick-map {
+.btn-quick-map:hover .box-quick-map{
     display: flex;
     background-color: #E0E4CC;
     border-bottom-left-radius: 4px ;
@@ -335,11 +335,15 @@ html {
     cursor: pointer;
 }
 
+.btn-quick-map .menu-shop {
+    background-color:#E0E4CC;
+}
+
 .heading-quick-map {
     position: relative;
     bottom: 4px;
+    background-color:#E0E4CC;
 }
-
 
 .btn-quick-map a{
     position: relative;
@@ -498,6 +502,7 @@ html {
     padding-top: 50%;
     background: url(./img/slider/slider.png) top center /cover no-repeat;
     text-align: center;
+    margin-bottom: 86px;
 }
 
 #slider .slogan-slider {
@@ -524,6 +529,7 @@ html {
     background-color:#A7DBD8;
     border-bottom-left-radius: 60px; 
     border-bottom-right-radius: 60px; 
+   
 }
 .heading-section {
     text-align: center;
@@ -535,7 +541,8 @@ html {
     font-size: 15px;
     margin: 8px;
     color: rgba(87, 86, 86, 0.575);
-    font-style: italic;
+    font-style: italic; 
+    
 }
 
 .about-text {
@@ -543,7 +550,8 @@ html {
     text-align: justify;
     line-height: 1.8;
     letter-spacing: 0.5px;
-    font-weight: 550;
+    font-weight: 545;
+    font-family: Tahoma;
 }
 #about-us{
 
@@ -601,6 +609,7 @@ html {
     background-color: #E5F78D;
     border-bottom-left-radius: 60px ;
     border-bottom-right-radius: 60px ;
+    margin-bottom: 86px;
 }
 
 .product-item {
@@ -614,11 +623,13 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5%;
 }
 .product-item .bg {
     width: 100%;
     position: relative;
     object-fit: cover;
+    background-color: none;
 }
 .product-item .item-ct {
     position: relative;
@@ -629,6 +640,7 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5%;
 }
 
 .product-item .item-gr {
@@ -658,15 +670,15 @@ html {
 }
 
 #typical-list{
-    width: 1200px;
+   
+}
+
+.typical-list-container {
+   width: 1200px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 86px 0;
-    border-radius:4px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 86px 16px;
     background-color: #E5F78D;
     border-top-left-radius: 60px ;
     border-top-right-radius: 60px ;
@@ -677,7 +689,10 @@ html {
 }
 
 .captions-container{
-
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-content{
@@ -717,12 +732,6 @@ html {
     margin-top: 16px;
 }
 
-.caption .demo-img {
-    border-radius: 8px;
-    width: 300px;
-    height: 300px;
-}
-
 .caption {
     display: none;   
 } 
@@ -754,7 +763,7 @@ html {
         padding: 0px;
         margin-bottom: 0px;
         line-height: 1.42857143; 
-        background-color: #F8ECC2;
+        background-color: #f8ecc200;
         border: none;
         border-radius: 0px;
         position: relative;
@@ -787,7 +796,8 @@ html {
         top: 0;
         left: 0;
         bottom: 0;
-        right: 0
+        right: 0;
+        border-radius: 5%  ;
     }
     .nav-hd {
         margin-top: 8px;
