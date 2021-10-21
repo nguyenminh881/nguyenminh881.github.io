@@ -20,16 +20,16 @@
 }
 
 .bd-lr {
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+    border-left: 1px solid #000 !important;
+    border-right: 1px solid #000 !important;
 }
 
 .bdbt-4px {
-    border-bottom: 1.4px dashed #000;
+    border-bottom: 1.4px dashed #000 !important;
 }
 
 .bdbt-2px{
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #000 !important;
 }
 
 .mt-8 {
@@ -37,42 +37,42 @@
 }
 
 .pd-tb-6 {
-    padding: 6px 0;
+    padding: 6px 0 !important;
 }
 
 .pdb-20{
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
 }
 
 .padding-bottom {
-    padding-bottom:4px;
+    padding-bottom:4px !important;
 }
 
 .pdtb-10 {
-    padding: 6px 0;
+    padding: 6px 0 !important;
 }
 
 .mgb-10 {
-    margin: 10px 0;
+    margin: 10px 0 !important;
 }
 
 .mgb-20{
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 .mgt-8 {
-    margin-top: 8px;
+    margin-top: 8px !important;
 }
 
 .mgt-12 {
-    margin-top: 12px;
+    margin-top: 12px !important;
 }
 
 .mgb-8{
     margin-bottom: 8px!important;
 }
 .mgl-8{
-    margin-left: 8px;
+    margin-left: 8px !important;
 }
 .mt-16 {
     margin-top: 16px !important;
@@ -82,7 +82,7 @@
 }
 
 .mgl-32 {
-    margin-left: 32px;
+    margin-left: 32px !important;
 }
 
 .pull-right {
@@ -94,7 +94,14 @@
 }
 
 .margin-navba {
-    margin: 39px 0px 15px 0px;
+    margin: 39px 0px 15px 0px !important;
+}
+
+.bdrdu-48-hcn{
+    border-bottom-left-radius: 48px;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    border-bottom-right-radius: 48px;
 }
 
 .divider {
