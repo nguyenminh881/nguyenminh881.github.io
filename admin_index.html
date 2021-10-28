@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20Coshop</title>
+    <link rel="icon" href="./assets/css/logo/Logo2.png" type="image/gif"> 
+    <link rel="stylesheet" href="./assets/css/admin_style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+</head>
+<body>
+    <div id="content-admin">
+            <div class="row bdbt-2px header-admin">
+                <div class="col col-half">
+                    <h1><i class="fas fa-user-lock"></i> ADMIN</h1>
+                </div>
+                <div class="col col-half text-center">
+                    <a href="index.html">
+                        <h3><i class="fas fa-long-arrow-alt-left"></i> QUAY LẠI SHOP</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-3 col">
+                    <div class="row">
+                        <ul class="thumucadmin">
+                            <li class="mgb-20 mgt-12">Thêm sản phẩm, sửa sản phẩm</li>
+                            <li class="mgb-20 mgt-12"></li>
+                            <li class="mgb-20 mgt-12">
+                                <a href="index.html">Xoá sản phẩm</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-3-1 bdl">
+                    <div class="add-prd">
+                        <form action="">
+                            <div class="khungsanpham ">
+                                <h3 class=" mgb-20">Khung sản phẩm trưng bày</h3>
+                                <div class="uploadimg">
+                                    <img id="output">
+                                </div>
+                                <label class="" for="img">Chọn ảnh: </label>
+                                <input class=" pd-4-8 mgb-20" type="file" name="img" id="" onchange="loadFile(event)">  <br>
+                                <label class="" for="danhmuc">Tình Trạng: </label><br>
+                                <input class=" pd-4-8 mgb-20" type="text" name="danhmuc" placeholder="New arrivial">  <br>
+                                <label class="" for="Gia">Giá: </label><br>
+                                <input class=" pd-4-8" type="text" placeholder="VNĐ" name="Gia" id="">
+                            </div>
+                            <div class="chitietsanpham">
+                                <h3 class="mgb-20">Chi tiết sản phẩm</h3>
+                                <label class="motasanpham" for="">Mô tả sản phẩm</label><br>
+                                <textarea class="pd-4-8 mgb-20" placeholder=" Nhập mô tả sản phẩm" name="motasanpham" required></textarea>
+                                <label class="" for="soluongsanphamtrongkho">Số lượng trong kho: </label><br>
+                                <input class=" pd-4-8 mgb-20" type="text" placeholder="100" name="soluongsanphamtrongkho" id=""> <br>
+                                <label class="" for="sale">Giá giảm: </label> <br>
+                                <input class=" pd-4-8 mgb-20" type="text" placeholder="không" name="sale" id=""> <br>
+                            </div>
+                            <input class="btn-update" type="submit" value="Cập nhập">
+                        </form>
+                    </div>
+                </div>
+            </div> 
+    </div>
+    <script>
+        var loadFile = function(event) {
+          var reader = new FileReader();
+          reader.onload = function(){
+            var output = document.getElementById('output');
+            output.src = reader.result;
+          };
+          reader.readAsDataURL(event.target.files[0]);
+        };
+    </script>
+</body>
+</html>

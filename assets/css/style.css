@@ -767,7 +767,7 @@ html {
         border-right: 1px solid #ccc ;
     }
     .thumbnail {
-        display: inline-block;
+        display: block;
         padding: 0px;
         margin-bottom: 0px;
         line-height: 1.42857143; 
@@ -847,7 +847,32 @@ html {
     .bg-pr-f1f1f1 {
         background-color: #A7DBD8;
     }
-    
+    .more-prd {
+        margin-top: 5px;
+        color: #FA6900;
+        position: relative;
+    }
+    .sub-more-desc-prd {
+        display: none;
+        min-width: 600px;
+        min-height: 100px;
+        justify-content: space-between;
+        z-index: 99;
+        background: #fff;
+        position: absolute;
+    }
+
+    .more-prd:hover .sub-more-desc-prd{
+        display: block;
+    }
+
+    .con-item-more {
+        
+    }
+
+    .more-desc-prd{
+        
+    }
 
 /* Khung sản phẩm */
 /* ------------------------------------------------------------------------------------------------ */
@@ -969,7 +994,7 @@ html {
 }
 
 .modal-buy-clothes form {
-    width: 800px;
+    width: 1000px;
     max-width: calc(100% - 32px);
     min-height: 200px;
     animation: modal-login-Fadein ease .35s;
@@ -1003,7 +1028,11 @@ html {
     border-radius: 18px;
 }
 
-.body2-buy-clothes{
+.body2-buy-clothes {
+    flex: 1;
+}
+
+.body3-buy-clothes{
     flex: 1;
     box-shadow: -1px 1px 6px rgb(80, 80, 80);
     border-radius: 8px ;
@@ -1051,6 +1080,15 @@ html {
 .btn-row-pay {
 }
 
+.remov-sp{
+    border: none;
+    background-color: #fa6400;
+    border-radius: 8px;
+    padding: 4px;
+    color: #fff;
+    margin-top: 4px;
+}
+
 .btn-pay {
     width: 100%;
     padding: 16px;
@@ -1066,7 +1104,105 @@ html {
     padding-bottom: 8px;
 }
 
+.mySlides {
+    display:none;
+}
+
+.image-product {
+    position: relative;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #FA6900;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 22px;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
 /* end-modal-buy-hàng */
+/* chat-box */
+.nut-mo-chatbox {
+}
+.Chatbox {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 12px;
+    z-index: 9999;
+}
+
+.form-container-chat {
+    max-width: 600px;
+    min-height:400px;
+    padding: 10px;
+    background-color:#f1f1f1;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    position: relative;
+}
+
+.form-container textarea:focus {
+    background-color: #F1f1f1;
+}
+
+.form-chat{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+}
+.nhap-chat {
+    border: none;
+    outline: 1px solid #000;
+    background-color:#F1F1F1;
+    color: #000;
+    font-size: 16px;
+}
+.form-container-chat .btn {
+    color: #fff;
+    border: none;
+    opacity: 1;
+    width: 100%;
+    padding: 8px 0;
+   background-color: #000;
+}
+.form-container-chat .nut-dong-chatbox {
+    background-color:#fa6400;
+    color: #000;
+    border: none;
+    opacity: 1;
+    width: 100%;
+    padding: 4px 0;
+}
+
+.form-container-chat .btn:hover, .nut-mo-chatbox:hover {
+    opacity: 0.9;
+}
+/* end-chatbox */
 
 @keyframes modal-login-Fadein {
     from {
@@ -1078,4 +1214,24 @@ html {
         transform: translateY(0);
     }
 }
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+ @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+ @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 /* form-đăng nhập */
+
+.col.col-three.js-sanpham.xoa-sanpham {
+    display: none !important;
+}
