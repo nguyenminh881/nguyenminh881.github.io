@@ -198,6 +198,9 @@ body {
 .header-admin {
 
 }
+.backshop {
+    margin-left: -268px;
+}
 
 .noidungthumuc {
     margin-bottom: 10px;
@@ -235,4 +238,10 @@ input,textarea {
     padding: 4px 0;
     border:none;
     cursor: pointer;
+}
+
+
+
+a {
+    color: #Fa6400;
 }
