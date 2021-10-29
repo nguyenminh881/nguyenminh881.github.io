@@ -68,6 +68,10 @@
     margin-top: 12px !important;
 }
 
+.mgt-40 {
+    margin-top: 40px;
+}
+
 .mgb-8{
     margin-bottom: 8px!important;
 }
@@ -83,6 +87,10 @@
 
 .mgl-32 {
     margin-left: 32px !important;
+}
+
+.mgl-80{
+    margin-left: 80px;
 }
 
 .pull-right {
@@ -111,6 +119,9 @@
     margin: 4px 0px;
 }
 
+.ol{
+    outline: none !important;
+}
 
 .row {
     /* margin-left: 8px;
@@ -211,9 +222,11 @@ body {
 }
 
 input,textarea {
-    outline: none ;
+    outline: 1px dashed #000 ;
     width: 100%;
     font-size: 16px;
+    background-color: #F8ECC2;
+    border: none;
 }
 
 .pd-4-8 {
@@ -235,12 +248,11 @@ input,textarea {
     background-color: #000;
     color: #fff;
     font-size: 16px;
-    padding: 4px 0;
+    padding: 8px 0;
     border:none;
     cursor: pointer;
+   margin-bottom: 20px;
 }
-
-
 
 a {
     color: #Fa6400;

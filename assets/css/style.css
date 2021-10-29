@@ -1087,6 +1087,8 @@ html {
     padding: 4px;
     color: #fff;
     margin-top: 4px;
+    cursor: pointer;
+    /* display: none; */
 }
 
 .btn-pay {
