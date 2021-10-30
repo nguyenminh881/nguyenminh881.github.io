@@ -117,7 +117,7 @@
                             </a>
                         </li>
                         <li class="mgb-8 nut-mo-chatbox">
-                            <a class="" onclick="moForm()">
+                            <a class=""  href="https://www.facebook.com/messages/t/103340142155370" onclick="moForm()">
                                 <i class="far fa-comment-dots"></i>
                                 <p>Chat</p> 
                             </a>
@@ -786,7 +786,7 @@
                 </div>
             </div>
             <div class="footer-social">
-                <a href="#"><i class="social-icon ti-facebook"></i></a>
+                <a href="https://www.facebook.com/20coshop.shop/"><i class="social-icon ti-facebook"></i></a>
                 <a href="#"><i class="social-icon ti-instagram"></i></a>
                 <a href="#"><i class="social-icon ti-youtube"></i></a>
             </div>
@@ -838,20 +838,7 @@
         </div> 
         <!-- modal-buy-product -->
         <!-- modal-buy-product -->
-        <!-- form-chat -->
-    <div class="Chatbox" id="myForm">
-        <form action="" class="form-container-chat">
-        <div class="modal-buy-closthes-heading heding-modal">
-            <h3>Hỗ trợ trực tiếp</h3>
-        </div>
-        <div class="form-chat">
-        <label for="msg"><b>Chat</b></label> <br>
-        <textarea class="nhap-chat" placeholder="    nhập lời nhắn..." name="msg" required></textarea>
-        <button type="submit" class="btn">Gửi</button>
-        <button type="button" class="btn nut-dong-chatbox" onclick="dongForm()">Đóng</button>
-        </div>
-        </form>
-    </div>
+     
 <!-- form đăng nhập -->
     <script>
         // đăng nhập
@@ -908,15 +895,6 @@
             caption.classList.add("active");
             };
         });
-    </script>
-<!-- chat -->
-    <script>
-        function moForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
-        function dongForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
     </script>
     <!-- thanhtoan -->
       <script>
@@ -976,5 +954,32 @@
             document.getElementById("nutxoasp").style.display = "block";
         }
     </script> -->
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103340142155370");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 </html>
