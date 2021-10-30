@@ -257,3 +257,9 @@ input,textarea {
 a {
     color: #Fa6400;
 }
+
+.thongbao {
+    display: none;
+    color: #Fa6400;
+    margin-bottom: 20px;
+}

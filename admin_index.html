@@ -38,6 +38,7 @@
                 <div class="col col-3-1 bdl">
                     <div class="add-prd mgl-80 mgt-40">
                         <form action="">
+                            <div id="thongbaoaa" class="thongbao"><h2>Cập nhập thành công <i class="fas fa-check"></i></h2></div>
                             <div class="khungsanpham ">
                                 <h3 class=" mgb-20">Khung sản phẩm trưng bày</h3>
                                 <div class="uploadimg">
@@ -61,7 +62,7 @@
                                 <label class="" for="sale">Giá giảm: </label> <br>
                                 <input class=" pd-4-8 mgb-20" type="text" placeholder="không" name="sale" id=""> <br>
                             </div>
-                            <input class="btn-update" type="submit" value="Cập nhập">
+                            <input class="btn-update" onclick="showtb()" type="submit" value="Cập nhập">
                         </form>
                     </div>
                 </div>
@@ -76,6 +77,11 @@
           };
           reader.readAsDataURL(event.target.files[0]);
         };
+    </script>
+    <script>
+      function showtb(){
+            document.getElementById('thongbaoaa').style.display= 'block'
+       }
     </script>
 </body>
 </html>
